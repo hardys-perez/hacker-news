@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+</head>
+<body>
+    <div class="m-5">
+        <div class="row">
+            <h2>Top News Stories at <time id="timeId"></time></h2>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <label>Filter results by:</label>
+                <input type="text" id="searchTextId" />
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Position</td>
+                        <td>Author</td>
+                        <td>Title</td>
+                    </tr>
+                </thead>
+                <tbody id="topNewsBodyId"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/js/hackernews.js"></script>
