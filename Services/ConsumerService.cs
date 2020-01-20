@@ -27,6 +27,11 @@ namespace HackerNews.Services
 
         public async Task SetStoriesAsync(IEnumerable<int> newStories)
         {
+            if (newStories.SequenceEqual(_topStories))
+            {
+                return;
+            }
+
             var nonStoredItems = await GetNonStoredItemsAsync(newStories);
 
             var added = AddItemsToDictionary(nonStoredItems);
